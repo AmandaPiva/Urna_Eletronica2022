@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&family=Roboto:ital,wght@0,100;0,300;0,400;1,100&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif ;
+}
+
+body{
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    min-height: 130vh;
+    min-width: 100vw;
+    position: relative;
+    background: #ACEFC5;
+    align-items: center;
+}
+
+div.dados{
+    padding: 8rem;
+    margin-left: 15px;
+}
+
+img{
+    width: 400px;
+    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1{
+    text-align: center;
+    margin-left: 85px;
+    margin-top: 15px;
+}
+
+p{
+    margin-left: 65px;
+    margin-top: 25px;
+    font-size: 20px;
+}
+
