@@ -6,12 +6,14 @@ var nome = prompt("Digite seu nome completo: ");
 var cpf = "Digite seu cpf: ";
 
 //variáveis contadoras dos candidatos e votos
+
 var bolsonaro = 0;
 var lula = 0;
 var marina = 0;
 var ciro = 0;
 var white = 0;
 var nul = 0;
+
 //validar cpf (para aceitar somente números)
 
     function validarcpf(tenteNovamente){    //função de um parâmetro
@@ -180,18 +182,21 @@ var nul = 0;
                     break;
 
                 case 13:
+                    
                     lula++; //contador adicionando quantidade de votos pra este candidato
                     alert('Voto computado com sucesso!!');
                     limpar();   // reutilizando a função que limpa a tela após o usuário votar
                     break;
                     
                 case 22:
+                    
                     marina++;   //contador adicionando quantidade de votos pra este candidato
                     alert('Voto computado com sucesso!!');
                     limpar();   // reutilizando a função que limpa a tela após o usuário votar
                     break;
 
                 case 35:
+                    
                     ciro++; //contador adicionando quantidade de votos pra este candidato
                     alert('Voto computado com sucesso!!');
                     limpar();   // reutilizando a função que limpa a tela após o usuário votar
@@ -219,4 +224,31 @@ var nul = 0;
         alert("vc votou nulo");
     }
 
-   
+   function eleito(){
+    if(bolsonaro > lula && bolsonaro > marina && lula > marina && marina > ciro){
+             aviso.innerHTML = "O vencedor é o Bolsonaro"
+        }
+        else if(bolsonaro > marina && bolsonaro > lula && marina > lula && lula > ciro){
+            aviso.innerHTML = "O vencedor é o Bolsonaro"
+        }
+        else if(bolsonaro > ciro && bolsonaro > lula && ciro > lula && lula > marina){
+            aviso.innerHTML = "O vencedor é o Bolsonaro"
+        }
+        else if(bolsonaro > ciro && bolsonaro > lula && ciro > lula && marina > lula){
+            aviso.innerHTML = "O vencedor é o Bolsonaro"
+        }
+        //parou aqui
+        else if(lula > bolsonaro && lula > marina && bolsonaro > marina && marina > ciro){
+            aviso.innerHTML = "O vencedor é o Lula"
+        }
+        else if(lula > bolsonaro && lula > marina && marina > bolsonaro && marina > ciro){
+            aviso.innerHTML = "O vencedor é o Lula"
+        }
+        else if(marina > ciro && marina > bolsonaro && ciro > bolsonaro && bolsonaro > lula){
+            aviso.innerHTML = "A vencedora é a Marina Silva"
+        }
+        else if(ciro > marina && ciro > lula && marina > lula && lula > bolsonaro){
+            aviso.innerHTML = "O vencedor é o Ciro Gomes"
+        }
+        
+   }
