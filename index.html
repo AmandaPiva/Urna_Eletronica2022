@@ -16,6 +16,15 @@
             <img src="img/Map_of_Brazil_with_flag.svg.png" alt="icon">
         </div>
 
+        <!--MENU-->
+        <ul>
+            <li>
+                <a href="lista.html">Lista de candidados</a>
+            </li>
+                <button onclick="whitenull()">Quantidade de Brancos e Nulos</button>
+                <button onclick="eleito()"> Vencedor</button>
+        </ul>
+        
     <section>
         <div id="input"></div> <!--div que virará nosso input para a entrada de dados-->
             <div class="table">
@@ -36,8 +45,11 @@
                         <td><button class="btn" onclick="valores('3')">3</button></td>
                     </tr>
                     <tr>
-                        <td colspan="2"><button class="branco" onclick="branco()">Branco</button></td>
-                        <td colspan="2"><button class="nulo" onclick="Nulo()">Nulo</button></td>
+                        <div class="container">
+                            <td colspan="2"><button class="branco" onclick="branco()">Branco</button></td>
+                            <td colspan="2"><button class="nulo" onclick="Nulo()">Nulo</button></td>
+                        </div>
+                        
                     </tr>
                     <tr>
                         <td colspan="3"><button class="limpar" onclick="limpar()">Limpar</button></td>
@@ -51,6 +63,7 @@
 
     <div id="images"></div>
     <div id="aviso"></div>
+<div class="vencedor"></div>
     <div id="btn"></div>
     <script src="index.js"></script>
 </body>
